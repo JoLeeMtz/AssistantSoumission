@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_main"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/nav_main_string" />
+        <item
+            android:id="@+id/nav_gerer_item"
+            android:icon="@drawable/ic_swap_horiz_black_24dp"
+            android:title="@string/nav_gerer_item_string" />
+        <item
+            android:id="@+id/nav_gerer_client"
+            android:icon="@drawable/ic_transfer_within_a_station_black_24dp"
+            android:title="@string/nav_gerer_client_string" />
+        <item
+            android:id="@+id/nav_gerer_compagnie"
+            android:icon="@drawable/ic_business_center_black_24dp"
+            android:title="@string/nav_gerer_compagnie_string" />
+    </group>
+</menu>

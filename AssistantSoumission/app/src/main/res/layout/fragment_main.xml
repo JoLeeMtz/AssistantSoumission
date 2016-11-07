@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#eaf2f7"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.soumission.assistant.assistantsoumission.MainFragment"
+    android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/btn_gerer_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:text="@string/nav_gerer_item_string" />
+
+    <Button
+        android:id="@+id/btn_gerer_client"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/fab_margin"
+        android:text="@string/nav_gerer_client_string" />
+
+    <Button
+        android:id="@+id/btn_gerer_compagnie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="@dimen/fab_margin"
+        android:text="@string/nav_gerer_compagnie_string" />z
+</LinearLayout>

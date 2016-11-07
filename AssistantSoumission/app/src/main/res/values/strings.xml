@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">Assistant Soumission</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!-- Names left list -->
+    <string name="nav_main_string">Accueil</string>
+    <string name="nav_gerer_item_string">Gérer items</string>
+    <string name="nav_gerer_client_string">Gérer clients</string>
+    <string name="nav_gerer_compagnie_string">Informations de la compagnie</string>
+
+
+    <!-- Activity Modify/Delete -->
+    <string name="add">Ajouter</string>
+    <string name="modify">Modifier</string>
+    <string name="delete">Supprimer</string>
+
+
+    <!-- Items -->
+    <string name="hint_ItemName">Nom de l\'item</string>
+    <string name="hint_ItemPrice">Prix de l\'item</string>
+    <string name="modify_item_name">Nom item :</string>
+    <string name="modify_item_price">Price :</string>
+    <string name="modify_item_MAJ">Date dernière mise à jour :</string>
+
+
+    <!-- Clients -->
+    <string name="hint_client_name">Nom</string>
+    <string name="hint_client_firstname">Prénom</string>
+    <string name="hint_client_city">Montréal</string>
+    <string name="hint_client_zipcode">A1B2C3</string>
+    <string name="hint_client_adress">Rue Jarry</string>
+    <string name="hint_client_phone">5147777777</string>
+    <string name="hint_client_cell">5147777777</string>
+    <string name="hint_client_email">exemple@hotmail.com</string>
+
+    <string name="modify_client_name">Nom :</string>
+    <string name="modify_client_firstname">Prénom :</string>
+    <string name="modify_client_city">Ville :</string>
+    <string name="modify_client_zipcode">Code Postal :</string>
+    <string name="modify_client_adress">Adresse :</string>
+    <string name="modify_client_phone">Téléphone :</string>
+    <string name="modify_client_cell">Cellulaire :</string>
+    <string name="modify_client_email">Courriel :</string>
+</resources>
