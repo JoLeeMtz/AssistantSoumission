@@ -10,10 +10,25 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.soumission.assistant.assistantsoumission.Page_ModifyItem">
 
+
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
+        android:inputType="textCapWords"
+        android:hint="@string/hint_client_name"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/textView4"
+        android:layout_marginLeft="27dp"
+        android:layout_marginStart="27dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textCapWords"
         android:hint="@string/hint_client_firstname"
         android:ems="10"
         android:layout_below="@+id/editText"
@@ -27,7 +42,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
+        android:inputType="textCapWords"
         android:hint="@string/hint_client_city"
         android:ems="10"
         android:layout_below="@+id/editText2"
@@ -41,7 +56,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
+        android:inputType="textPostalAddress"
         android:hint="@string/hint_client_zipcode"
         android:ems="10"
         android:layout_below="@+id/editText3"
@@ -56,7 +71,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
+        android:inputType="textCapWords"
         android:hint="@string/hint_client_adress"
         android:ems="10"
         android:layout_below="@+id/editText4"
@@ -103,7 +118,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
+        android:inputType="textEmailAddress"
         android:hint="@string/hint_client_email"
         android:ems="10"
         android:layout_below="@+id/editText7"
@@ -149,20 +164,6 @@
         android:layout_alignBottom="@+id/editText4"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:hint="@string/hint_client_name"
-        android:ems="10"
-        android:id="@+id/editText"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/textView4"
-        android:layout_marginLeft="27dp"
-        android:layout_marginStart="27dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
 
     <TextView
         android:text="@string/modify_client_name"

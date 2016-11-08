@@ -53,15 +53,6 @@ public class GererItemsFragment extends Fragment {
             }
         });
 
-        // PEUPLER DB
-        //SimpleDateFormat postFormater = new SimpleDateFormat("MMMM dd, yyyy");
-        //String newDateStr = postFormater.format(new Date());
-
-        //new DB_Items(getContext()).addItem(new Items(1, "papier", "5", newDateStr));
-        //new DB_Items(getContext()).addItem(new Items(2, "carton", "2", newDateStr));
-        //new DB_Items(getContext()).addItem(new Items(3, "clous", "1.25", newDateStr));
-
-
         init_RecyclerView();
 
         return vue;
@@ -85,7 +76,6 @@ public class GererItemsFragment extends Fragment {
 
         // Initialise adapter
         mAdapter = new MyItemsAdapter(new DB_Items(getContext()).getListItems(), getActivity());
-        //mAdapter = new MyItemsAdapter(db_items.getListItems());
         mListItems.setAdapter(mAdapter);
     }
 }

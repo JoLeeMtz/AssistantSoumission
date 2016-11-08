@@ -49,11 +49,8 @@ public class Page_ModifyClient extends AppCompatActivity {
         email = (EditText)findViewById(R.id.editText8);
         modify = (Button)findViewById(R.id.modify);
 
-        zipcode.setFilters(new InputFilter[] {new InputFilter.AllCaps()});
-
-        // Limit the phone number to 11 digits maximum
-        //phone.setFilters(new InputFilter[] {new DecimalDigitsInputFilter(11,0)});
-        //cell.setFilters(new InputFilter[] {new DecimalDigitsInputFilter(11,0)});
+        InputFilter[] filters = {new InputFilter.LengthFilter(6), new InputFilter.AllCaps()};
+        zipcode.setFilters(filters);
 
         init_EditText();
     }

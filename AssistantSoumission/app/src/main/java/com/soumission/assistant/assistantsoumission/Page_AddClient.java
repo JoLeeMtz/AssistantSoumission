@@ -49,7 +49,8 @@ public class Page_AddClient extends AppCompatActivity {
         email = (EditText)findViewById(R.id.editText8);
         add = (Button)findViewById(R.id.add);
 
-        zipcode.setFilters(new InputFilter[] {new InputFilter.AllCaps()});
+        InputFilter[] filters = {new InputFilter.LengthFilter(6), new InputFilter.AllCaps()};
+        zipcode.setFilters(filters);
     }
     // Make the <- go back
     @Override

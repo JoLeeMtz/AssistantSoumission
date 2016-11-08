@@ -49,11 +49,6 @@ public class GererClientsFragment extends Fragment {
             }
         });
 
-
-        //new DB_Clients(getContext()).addClient(new Clients(1, "Bob", "Sexy", "PedoStyle", "j7e8r9", "Rue Pedo", "11111111111", "", "callMe_69@hotmail.com"));
-        //new DB_Clients(getContext()).addClient(new Clients(2, "Robert", "LaVille", "PedoStyle", "j7f8r1", "Rue Sexy Girls", "11122233344", "12345678910", "CallMeRobert_ThaChamp@gmail.com"));
-        //new DB_Clients(getContext()).addClient(new Clients(3, "Jeff", "My Name", "SomeWhere", "h1r2a2", "Rue Pas De Tes Affaires", "69696969690", "911", "MyName_isJeff@yahoo.com"));
-
         init_RecyclerView();
 
         // Inflate the layout for this fragment
@@ -78,7 +73,6 @@ public class GererClientsFragment extends Fragment {
 
         // Initialise adapter
         mAdapter = new MyClientsAdapter(new DB_Clients(getContext()).getListClients(), getActivity());
-        //mAdapter = new MyItemsAdapter(db_items.getListItems());
         mListClients.setAdapter(mAdapter);
     }
 }
