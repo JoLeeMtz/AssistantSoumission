@@ -1,5 +1,6 @@
 package com.soumission.assistant.assistantsoumission;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -16,6 +17,7 @@ import java.util.List;
 
 public class MyClientsAdapter extends RecyclerView.Adapter<MyClientsAdapter.ViewHolder> {
     private List<Clients> mDataSet;
+    private Activity activity;
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
@@ -48,8 +50,9 @@ public class MyClientsAdapter extends RecyclerView.Adapter<MyClientsAdapter.View
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public MyClientsAdapter(List<Clients> myDataSet) {
+    public MyClientsAdapter(List<Clients> myDataSet, Activity activity) {
         mDataSet = myDataSet;
+        this.activity = activity;
     }
 
     // Create new views (invoked by the layout manager)
@@ -95,7 +98,7 @@ public class MyClientsAdapter extends RecyclerView.Adapter<MyClientsAdapter.View
                 activityModify.putExtra("cell", mDataSet.get(pos).get_cell());
                 activityModify.putExtra("courriel", mDataSet.get(pos).get_courriel());
 
-                v.getContext().startActivity(activityModify);
+                activity.startActivityForResult(activityModify, GererClientsFragment.REQUEST_ADD);
             }
         });
     }

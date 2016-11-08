@@ -1,5 +1,6 @@
 package com.soumission.assistant.assistantsoumission;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.InputFilter;
@@ -54,6 +55,8 @@ public class Page_AddItem extends AppCompatActivity {
     public void addItem(View view) {
         init_Vars();
         new DB_Items(getApplicationContext()).addItem(_item);
+
+        setResult(GererItemsFragment.REQUEST_ADD, new Intent().putExtra("refresh", true));
 
         finish();
     }

@@ -1,5 +1,6 @@
 package com.soumission.assistant.assistantsoumission;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.InputFilter;
@@ -86,6 +87,8 @@ public class Page_ModifyItem extends AppCompatActivity {
         // Update the item
         new DB_Items(getApplicationContext()).updateItem(_item);
 
+        setResult(GererItemsFragment.REQUEST_ADD, new Intent().putExtra("refresh", true));
+
         // Return in list
         finish();
     }
@@ -93,6 +96,8 @@ public class Page_ModifyItem extends AppCompatActivity {
     public void deleteItem(View view) {
         // Delete the item
         new DB_Items(getApplicationContext()).deleteItem(_item);
+
+        setResult(GererItemsFragment.REQUEST_ADD, new Intent().putExtra("refresh", true));
 
         // Return in list
         finish();

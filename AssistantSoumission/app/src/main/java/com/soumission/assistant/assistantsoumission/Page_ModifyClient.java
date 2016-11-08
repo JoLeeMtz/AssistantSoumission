@@ -1,5 +1,6 @@
 package com.soumission.assistant.assistantsoumission;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.InputFilter;
@@ -112,6 +113,8 @@ public class Page_ModifyClient extends AppCompatActivity {
         // Update the item
         new DB_Clients(getApplicationContext()).updateClient(_client);
 
+        setResult(GererClientsFragment.REQUEST_ADD, new Intent().putExtra("refresh", true));
+
         // Return in list
         finish();
     }
@@ -119,6 +122,8 @@ public class Page_ModifyClient extends AppCompatActivity {
     public void deleteItem(View view) {
         // Delete the item
         new DB_Clients(getApplicationContext()).deleteClient(_client);
+
+        setResult(GererClientsFragment.REQUEST_ADD, new Intent().putExtra("refresh", true));
 
         // Return in list
         finish();

@@ -19,8 +19,9 @@ import android.view.ViewGroup;
  */
 public class GererClientsFragment extends Fragment {
     private RecyclerView mListClients;
-    private RecyclerView.Adapter mAdapter;
+    private MyClientsAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
+    public static final int REQUEST_ADD = 1;
 
 
     public GererClientsFragment() {
@@ -43,7 +44,7 @@ public class GererClientsFragment extends Fragment {
                 //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show();
                 Intent add_Activity = new Intent(getContext(), Page_AddClient.class);
 
-                getContext().startActivity(add_Activity);
+                startActivityForResult(add_Activity, REQUEST_ADD);
             }
         });
 
@@ -62,6 +63,14 @@ public class GererClientsFragment extends Fragment {
         super.onResume();
         init_RecyclerView();
     }
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (resultCode == getActivity().RESULT_OK && requestCode == REQUEST_ADD) {
+            if (data.hasExtra("refresh")) {
+                if (data.getExtras().getBoolean("refresh")) mAdapter.notifyDataSetChanged();
+            }
+        }
+    }
 
 
     private void init_RecyclerView() {
@@ -74,7 +83,7 @@ public class GererClientsFragment extends Fragment {
         mListClients.setLayoutManager(mLayoutManager);
 
         // Initialise adapter
-        mAdapter = new MyClientsAdapter(new DB_Clients(getContext()).getListClients());
+        mAdapter = new MyClientsAdapter(new DB_Clients(getContext()).getListClients(), getActivity());
         //mAdapter = new MyItemsAdapter(db_items.getListItems());
         mListClients.setAdapter(mAdapter);
     }

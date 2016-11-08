@@ -140,7 +140,6 @@ public class DB_Clients extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues val = new ContentValues();
 
-        val.put(ID, client.get_id());
         val.put(NOM, client.get_nom());
         val.put(PRENOM, client.get_prenom());
         val.put(VILLE, client.get_ville());

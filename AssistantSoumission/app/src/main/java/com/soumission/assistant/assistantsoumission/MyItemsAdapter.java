@@ -1,5 +1,6 @@
 package com.soumission.assistant.assistantsoumission;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -16,6 +17,7 @@ import java.util.List;
 
 public class MyItemsAdapter extends RecyclerView.Adapter<MyItemsAdapter.ViewHolder> {
     private List<Items> mDataSet;
+    private Activity activity;
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
@@ -37,8 +39,9 @@ public class MyItemsAdapter extends RecyclerView.Adapter<MyItemsAdapter.ViewHold
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public MyItemsAdapter(List<Items> myDataset) {
+    public MyItemsAdapter(List<Items> myDataset, Activity activity) {
         mDataSet = myDataset;
+        this.activity = activity;
     }
 
     // Create new views (invoked by the layout manager)
@@ -75,7 +78,7 @@ public class MyItemsAdapter extends RecyclerView.Adapter<MyItemsAdapter.ViewHold
                 activityModify.putExtra("price", mDataSet.get(pos).get_price());
                 activityModify.putExtra("maj", mDataSet.get(pos).get_MAJ());
 
-                v.getContext().startActivity(activityModify);
+                activity.startActivityForResult(activityModify, GererItemsFragment.REQUEST_ADD);
             }
         });
     }

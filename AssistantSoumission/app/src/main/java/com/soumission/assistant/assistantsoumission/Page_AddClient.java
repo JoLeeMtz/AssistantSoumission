@@ -1,5 +1,6 @@
 package com.soumission.assistant.assistantsoumission;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.telephony.PhoneNumberUtils;
@@ -80,6 +81,8 @@ public class Page_AddClient extends AppCompatActivity {
     public void addClient(View view) {
         init_Vars();
         new DB_Clients(getApplicationContext()).addClient(_client);
+
+        setResult(GererClientsFragment.REQUEST_ADD, new Intent().putExtra("refresh", true));
 
         finish();
     }

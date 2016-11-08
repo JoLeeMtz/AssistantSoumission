@@ -121,7 +121,6 @@ public class DB_Items extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues val = new ContentValues();
 
-        val.put(ID, item.get_id());
         val.put(ITEM, item.get_nameItem());
         val.put(PRICE, item.get_price());
         val.put(DATE_UPDATE, item.get_MAJ());
