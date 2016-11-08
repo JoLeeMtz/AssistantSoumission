@@ -78,7 +78,7 @@ public class MyItemsAdapter extends RecyclerView.Adapter<MyItemsAdapter.ViewHold
                 activityModify.putExtra("price", mDataSet.get(pos).get_price());
                 activityModify.putExtra("maj", mDataSet.get(pos).get_MAJ());
 
-                activity.startActivityForResult(activityModify, GererItemsFragment.REQUEST_ADD);
+                v.getContext().startActivity(activityModify);
             }
         });
     }

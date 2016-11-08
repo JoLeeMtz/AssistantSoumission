@@ -98,7 +98,7 @@ public class MyClientsAdapter extends RecyclerView.Adapter<MyClientsAdapter.View
                 activityModify.putExtra("cell", mDataSet.get(pos).get_cell());
                 activityModify.putExtra("courriel", mDataSet.get(pos).get_courriel());
 
-                activity.startActivityForResult(activityModify, GererClientsFragment.REQUEST_ADD);
+                v.getContext().startActivity(activityModify);
             }
         });
     }

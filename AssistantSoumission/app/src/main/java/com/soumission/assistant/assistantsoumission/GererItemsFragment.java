@@ -48,7 +48,8 @@ public class GererItemsFragment extends Fragment {
                 //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show();
                 Intent add_Activity = new Intent(getContext(), Page_AddItem.class);
 
-                startActivityForResult(add_Activity, REQUEST_ADD);
+                getContext().startActivity(add_Activity);
+                //startActivityForResult(add_Activity, REQUEST_ADD);
             }
         });
 
@@ -69,14 +70,7 @@ public class GererItemsFragment extends Fragment {
     public void onResume() {
         super.onResume();
         init_RecyclerView();
-    }
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (resultCode == getActivity().RESULT_OK && requestCode == REQUEST_ADD) {
-            if (data.hasExtra("refresh")) {
-                if (data.getExtras().getBoolean("refresh")) mAdapter.notifyDataSetChanged();
-            }
-        }
+        mAdapter.notifyDataSetChanged();
     }
 
 
